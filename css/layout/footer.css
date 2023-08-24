@@ -1,0 +1,145 @@
+/*-----------  TEXT  -----------*/
+
+.page-footer {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  background-color: var(--title-color);
+}
+
+.page-footer .container {
+  display: flex;
+  align-items: baseline;
+}
+
+.footer-logo-and-moto {
+  margin-right: 120px;
+}
+
+.page-footer .logotype {
+  display: inline-block;
+  margin-bottom: 16px;
+}
+
+.page-footer .logotype-right-accent {
+  color: var(--secondary-accent-color);
+}
+
+.footer-moto-text {
+  width: 264px;
+  color: var(--secondary-accent-color);
+}
+
+/*-------  SOCIAL MEDIA  -------*/
+
+/* socia media links */
+
+.social-media-contacts-list {
+  display: flex;
+}
+
+.social-media-contact-item {
+  width: 40px;
+  height: 40px;
+}
+
+.social-media-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: var(--brand-color);
+  transition: background-color var(--transition-duration)
+    var(--transition-function);
+}
+
+.social-contact-icon {
+  fill: var(--secondary-accent-color);
+}
+
+.footer-social-media-title {
+  margin-bottom: 16px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  color: var(--secondary-color-white);
+}
+
+.page-footer .social-media-contacts-list {
+  justify-content: flex-start;
+  gap: 16px;
+}
+
+.page-footer .social-media-link:hover,
+.page-footer .social-media-link:focus {
+  background-color: var(--accent-color-green);
+}
+
+/* subscribe form */
+
+.footer-subscribe-form-container {
+  margin-left: auto;
+  max-width: 453px;
+}
+
+.footer-subscribe-form-title {
+  margin-bottom: 16px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  color: var(--secondary-color-white);
+}
+
+.footer-subscribe-form {
+  display: flex;
+  gap: 24px;
+}
+
+.footer-subscribe-form-input {
+  display: block;
+  width: 264px;
+  height: 40px;
+  padding: 8px 16px;
+  background-color: transparent;
+  border: 1px solid var(--secondary-color-white);
+  border-radius: 4px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+  font-size: var(--small-text-size);
+  line-height: 1.5;
+  letter-spacing: 0.48px;
+  color: var(--secondary-color-white);
+  transition: border-color var(--transition-duration) var(--transition-function);
+}
+
+.footer-subscribe-form-input::placeholder {
+  color: var(--secondary-color-white);
+}
+
+.footer-subscribe-form-input:focus,
+.footer-subscribe-form-input:focus {
+  outline: transparent;
+  border-color: var(--brand-color);
+}
+
+.footer-subscribe-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 165px;
+  height: 40px;
+  border-radius: 4px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+  transition: background-color var(--transition-duration)
+    var(--transition-function);
+}
+
+.footer-subscribe-btn:hover,
+.footer-subscribe-btn:focus {
+  background-color: var(--active-element-color);
+}
+
+.footer-subscribe-btn-icon {
+  margin-left: 16px;
+  fill: var(--secondary-color-white);
+}

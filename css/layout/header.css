@@ -1,0 +1,112 @@
+.page-header {
+  box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
+}
+
+.page-header::after {
+  display: block;
+  border-bottom: 1px solid var(--primary-accent-color);
+  content: "";
+}
+
+.page-header-container {
+  display: flex;
+  align-items: center;
+}
+
+.page-header .link {
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+
+/*-----  PAGE NAVIGATION  ----*/
+
+.page-navigation {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 784px;
+}
+
+.page-header .logotype {
+  margin-right: 76px;
+}
+
+/*----------  MENU  ----------*/
+
+.menu {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.menu-item:not(:last-child) {
+  margin-right: 40px;
+}
+
+.menu-item-link {
+  position: relative;
+  display: block;
+  width: max-content;
+  font-size: var(--menu-item-text-size);
+  font-weight: var(--menu-item-text-weight);
+  color: var(--menu-item-color);
+  transition: color var(--transition-duration) var(--transition-function);
+}
+
+.menu-item-link::after {
+  display: block;
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  margin-top: 20px;
+  height: 4px;
+  width: 100%;
+  border-radius: 2px;
+  background-color: transparent;
+  content: "";
+  transition: background-color var(--transition-duration)
+    var(--transition-function);
+}
+
+.menu .current {
+  color: var(--active-element-color);
+  transition: color var(--transition-duration) var(--transition-function);
+}
+
+.menu .current::after {
+  background-color: var(--active-element-color);
+  transition: background-color var(--transition-duration)
+    var(--transition-function);
+}
+
+.menu .menu-item-link:hover,
+.menu-item .menu-item-link:focus {
+  color: var(--active-element-color);
+}
+
+/*----------  CONTACTS  ------*/
+
+.contacts-list {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.contacts {
+  font-style: normal;
+}
+
+.contact-item:not(:last-child) {
+  margin-right: 40px;
+}
+
+.contact {
+  color: var(--primary-color-black);
+  transition: color var(--transition-duration) var(--transition-function);
+  white-space: nowrap;
+}
+
+.contact:hover,
+.contact:focus {
+  color: var(--active-element-color);
+}

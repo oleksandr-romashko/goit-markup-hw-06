@@ -1,0 +1,63 @@
+:root {
+  /*----------  COLORS  ----------*/
+
+  /* IRIS - Primary Brand - on design layout color */
+  --brand-color: #4d5ae5;
+  /* NAVY BLUE - Dark - on design layout color */
+  --menu-item-color: #2e2f42;
+  --hero-bg-color: #2e2f42;
+  --title-color: #2e2f42;
+  /* SLATE - Text - on design layout color */
+  --primary-color-black: #434455;
+  /* WHITE - White background - on design layout color */
+  --secondary-color-white: #ffffff;
+  /* CORNFLOWER - Accent - on design layout color */
+  --primary-accent-color: #e7e9fc;
+  /* CLOUD - Light - on design layout color */
+  --secondary-accent-color: #f4f4fd;
+  /* LIGHT SLATE - on design layout color */
+  --accent-color-grey: #8e8f99;
+  /* GREEN - on design layout color */
+  --accent-color-green: #31d0aa;
+  /* OCEAN - Pressed state - on design layout color */
+  --active-element-color: #404bbf;
+  /* Backdrop and Modal window */
+  --backdrop-color: rgba(46, 47, 66, 0.4);
+  --modal-window-bg: #fcfcfc;
+  --modal-window-element-color-dark: #2e2f42;
+  --modal-element-transparent-color-grey: rgba(46, 47, 66, 0.4);
+  /* Backdrop and Modal window */
+  --subscribe-input-bg-color: #2e2f42;
+
+  /*---------  FONT STYLES  ------*/
+
+  /* families */
+  --main-text-family: "Roboto";
+  --main-text-default-family: sans-serif;
+  --logo-text-family: "Raleway";
+  --logo-text-default-family: sans-serif;
+
+  /* sizes */
+  --page-title-text-size: 56px;
+  --title-text-size: 36px;
+  --subtitle-text-size: 20px;
+  --logo-text-size: 18px;
+  --form-element-text-size: 18px;
+  --menu-item-text-size: 16px;
+  --btn-text-size: 16px;
+  --body-text-size: 16px;
+  --small-text-size: 12px;
+
+  /* weights */
+  --logo-text-weight: 800;
+  --title-text-weight: 700;
+  --subtitle-text-weight: 500;
+  --menu-item-text-weight: 500;
+  --btn-text-weight: 500;
+  --main-text-weight: 400;
+
+  /*---  TRANSITION PROPERTIES  --*/
+
+  --transition-duration: 250ms;
+  --transition-function: cubic-bezier(0.4, 0, 0.2, 1);
+}

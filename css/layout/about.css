@@ -1,0 +1,16 @@
+.about {
+  padding-top: 0;
+}
+
+.about-list {
+  display: flex;
+  gap: 24px;
+}
+
+.about-list-item {
+  width: calc((100% - 48px) / 3);
+}
+
+.about .about-img {
+  border: 1px solid var(--primary-accent-color);
+}

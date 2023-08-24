@@ -1,0 +1,296 @@
+/*---------  BACKDROP  ---------*/
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  width: 100%;
+  height: 100%;
+  background-color: var(--backdrop-color);
+  transition: opacity var(--transition-duration) var(--transition-function),
+    visibility var(--transition-duration) var(--transition-function);
+}
+
+.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+/*-------  MODAL WINDOW  -------*/
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0 auto;
+  padding: 72px 24px 24px;
+  width: 408px;
+  border-radius: 4px;
+  background-color: var(--modal-window-bg);
+  box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2),
+    0px 1px 3px 0px rgba(0, 0, 0, 0.12), 0px 1px 1px 0px rgba(0, 0, 0, 0.14);
+  transition: transform var(--transition-duration) var(--transition-function);
+}
+
+/* modal - close button */
+
+.modal-close-btn {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  line-height: 0;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  background-color: var(--primary-accent-color);
+  transition: background-color var(--transition-duration)
+      var(--transition-function),
+    border var(--transition-duration) var(--transition-function);
+}
+
+.modal-close-btn:hover,
+.modal-close-btn:focus {
+  border: none;
+  background-color: var(--active-element-color);
+}
+
+.modal-close-btn:focus {
+  outline: 1px solid var(--brand-color);
+  outline-offset: 2px;
+}
+
+.modal-close-btn-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  fill: var(--modal-window-element-color-dark);
+  transition: fill var(--transition-duration) var(--transition-function);
+}
+
+.modal-close-btn:hover .modal-close-btn-icon,
+.modal-close-btn:focus .modal-close-btn-icon {
+  fill: var(--secondary-color-white);
+}
+
+/* modal - order form - title */
+
+.order-form-title {
+  max-width: 100%;
+  margin-bottom: 16px;
+  text-align: center;
+  font-weight: 500;
+  color: var(--title-color);
+}
+
+/* modal - order form - common styles */
+
+.order-form-interactive-text-element {
+  width: 100%;
+  border-radius: 4px;
+  border: 1px solid var(--modal-element-transparent-color-grey);
+  font-size: var(--form-element-text-size);
+  background-color: transparent;
+  outline: transparent;
+  transition: border-color var(--transition-duration) var(--transition-function);
+}
+
+.order-form-interactive-text-element:focus,
+.order-form-interactive-text-element:focus {
+  border-color: var(--brand-color);
+}
+
+.order-form-field-description {
+  display: block;
+  width: 100%;
+  margin-bottom: 4px;
+  font-size: var(--small-text-size);
+  line-height: 1.17;
+  letter-spacing: 0.48px;
+  color: var(--accent-color-grey);
+}
+
+/* modal - order form - text input */
+
+.order-form-user-text-field-wrapper {
+  margin-bottom: 8px;
+}
+
+.order-form-input-wrapper {
+  display: block;
+  position: relative;
+}
+
+.order-form-text-field-input {
+  height: 40px;
+  padding-left: 38px;
+}
+
+.order-form-text-field-icon {
+  position: absolute;
+  top: 50%;
+  left: 16px;
+  transform: translateY(-50%);
+  fill: var(--modal-window-element-color-dark);
+  transition: fill var(--transition-duration) var(--transition-function);
+}
+
+.order-form-text-field-input:focus + .order-form-text-field-icon {
+  fill: var(--brand-color);
+}
+
+/* modal - order form - text comment */
+
+.order-form-user-comment-field-wrapper {
+  margin-bottom: 16px;
+}
+
+/* TODO: now element is using ::placeholder styles as main text
+   TODO: replace styles with same as for other fields
+   TODO: similarly add "order-form-interactive-text-element" class
+   TODO: leave height and padding only 
+ */
+.order-form-text-field-comment {
+  height: 120px;
+  padding: 8px 16px;
+  width: 100%;
+  border-radius: 4px;
+  border: 1px solid var(--modal-element-transparent-color-grey);
+  background-color: transparent;
+  font-size: var(--small-text-size);
+  line-height: 1.17;
+  letter-spacing: 0.48px;
+  color: var(--modal-element-transparent-color-grey);
+  outline: transparent;
+  transition: border-color var(--transition-duration) var(--transition-function);
+}
+
+.order-form-text-field-comment {
+  resize: none;
+}
+
+.order-form-text-field-comment:focus,
+.order-form-text-field-comment:focus {
+  border-color: var(--brand-color);
+}
+
+.order-form-text-field-comment::placeholder {
+  font-size: var(--small-text-size);
+  line-height: 1.17;
+  letter-spacing: 0.48px;
+  color: var(--modal-element-transparent-color-grey);
+}
+
+/* modal - order form - terms and conditions with checkbox */
+
+.order-form-terms-consent-wrapper {
+  margin-bottom: 24px;
+}
+
+.order-form-terms-description {
+  display: block;
+  font-size: var(--small-text-size);
+  line-height: 1.17;
+  letter-spacing: 0.48px;
+  color: var(--accent-color-grey);
+}
+
+/* checkmark */
+
+/* TODO: use this statement instead of "visually-hidden" class to hide element */
+/* .order-form-terms-consent-checkbox {
+  position: absolute;
+  appearance: none;
+} */
+
+.order-form-terms-custom-checkmark {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  margin-right: 8px;
+  width: 16px;
+  height: 16px;
+  border: 1px solid var(--modal-element-transparent-color-grey);
+  border-radius: 2px;
+  fill: transparent;
+  outline: 1px solid transparent;
+  transition: background-color var(--transition-duration)
+      var(--transition-function),
+    border var(--transition-duration) var(--transition-function),
+    fill var(--transition-duration) var(--transition-function);
+}
+
+.order-form-terms-consent-checkbox:checked
+  + .order-form-terms-description
+  > .order-form-terms-custom-checkmark {
+  background-color: var(--active-element-color);
+  border: none;
+  fill: var(--secondary-accent-color);
+}
+
+.order-form-terms-consent-checkbox:focus
+  + .order-form-terms-description
+  > .order-form-terms-custom-checkmark {
+  outline-color: var(--brand-color);
+  outline-offset: 2px;
+}
+
+/* checkmark icon */
+
+.order-form-terms-custom-checkmark-icon {
+  fill: transparent;
+  transition: fill var(--transition-duration) var(--transition-function);
+}
+
+.order-form-terms-consent-checkbox:checked
+  + .order-form-terms-description
+  .order-form-terms-custom-checkmark
+  > .order-form-terms-custom-checkmark-icon {
+  fill: var(--secondary-accent-color);
+}
+
+/* privacy policy link */
+
+.order-form-privacy-policy-link {
+  color: var(--brand-color);
+  transition: color var(--transition-duration) var(--transition-function);
+}
+
+.order-form-privacy-policy-link:hover,
+.order-form-privacy-policy-link:focus {
+  color: var(--active-element-color);
+}
+
+.order-form-privacy-policy-link:focus {
+  border-radius: 2px;
+  outline: 1px solid var(--brand-color);
+  outline-offset: 2px;
+}
+
+/* modal - order form - button */
+
+.order-form-btn {
+  display: block;
+  min-width: 169px;
+  padding: 16px 32px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 4px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+  transition: background-color var(--transition-duration)
+    var(--transition-function);
+}
+
+.order-form-btn:hover,
+.order-form-btn:focus {
+  background-color: var(--active-element-color);
+}

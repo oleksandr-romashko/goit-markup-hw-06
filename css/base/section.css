@@ -1,0 +1,24 @@
+.section {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+
+.section-title {
+  margin-bottom: 72px;
+  text-align: center;
+
+  font-size: var(--title-text-size);
+  font-weight: var(--title-text-weight);
+  line-height: 1.11;
+  letter-spacing: 0.72px;
+  color: var(--title-color);
+  text-transform: capitalize;
+}
+
+.section-subtitle {
+  font-size: var(--subtitle-text-size);
+  font-weight: var(--subtitle-text-weight);
+  line-height: 1.2;
+  letter-spacing: 0.4px;
+  color: var(--title-color);
+}

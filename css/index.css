@@ -1,0 +1,30 @@
+/*--------  VARIABLES  -------*/
+
+@import url("./utils/variables.css");
+
+/*------  COMMON STYLES  -----*/
+
+@import url("./base/common.css");
+@import url("./base/container.css");
+@import url("./base/section.css");
+
+/*-------  MODAL WINDOW  -----*/
+
+@import url("./layout/modal.css");
+
+/*-----  SECTION LAYOUTS  ----*/
+
+@import url("./layout/header.css");
+@import url("./layout/footer.css");
+
+/* main page */
+
+@import url("./layout/hero.css");
+@import url("./layout/benefits.css");
+@import url("./layout/about.css");
+@import url("./layout/team.css");
+@import url("./layout/clients.css");
+
+/* portfolio page */
+
+@import url("./layout/portfolio.css");
