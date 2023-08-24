@@ -28,7 +28,7 @@ body {
   font-size: var(--body-text-size);
   font-weight: var(--main-text-weight);
   line-height: 1.5;
-  letter-spacing: 0.32px;
+  letter-spacing: 0.02em;
   color: var(--primary-color-black);
   background-color: var(--secondary-color-white);
 }
@@ -39,35 +39,6 @@ body {
 
 .link {
   text-decoration: none;
-}
-
-.basic-btn {
-  border: none;
-  font-family: inherit;
-  font-size: var(--btn-text-size);
-  font-weight: var(--btn-text-weight);
-  line-height: inherit;
-  letter-spacing: 0.64px;
-  background-color: var(--brand-color);
-  color: var(--secondary-color-white);
-}
-
-/*----------  LOGOTYPE  ------*/
-
-.logotype {
-  font-family: var(--logo-text-family), var(--logo-text-default-family);
-  font-size: var(--logo-text-size);
-  font-weight: var(--logo-text-weight);
-  line-height: 1.17;
-  letter-spacing: 0.54px;
-  color: var(--brand-color);
-  text-transform: uppercase;
-}
-
-/*----------  BUTTON  --------*/
-
-.logotype-right-accent {
-  color: var(--title-color);
 }
 
 /*-  VISUALLY HIDDEN PATERN  -*/
@@ -83,4 +54,35 @@ body {
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
+}
+
+/*--------  COMPONENTS  ------*/
+
+/* button */
+
+.basic-btn {
+  border: none;
+  font-family: inherit;
+  font-size: var(--btn-text-size);
+  font-weight: var(--btn-text-weight);
+  line-height: inherit;
+  letter-spacing: 0.04em;
+  background-color: var(--brand-color);
+  color: var(--secondary-color-white);
+}
+
+/* logotype */
+
+.logotype {
+  font-family: var(--logo-text-family);
+  font-size: var(--logo-text-size);
+  font-weight: var(--logo-text-weight);
+  line-height: 1.17;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--brand-color);
+}
+
+.logotype-right-accent {
+  color: var(--title-color);
 }
