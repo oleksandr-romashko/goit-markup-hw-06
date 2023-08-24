@@ -60,6 +60,13 @@ body {
 
 /* button */
 
+.image-btn {
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  line-height: 0;
+}
+
 .basic-btn {
   border: none;
   font-family: inherit;
