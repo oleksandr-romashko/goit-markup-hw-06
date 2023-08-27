@@ -1,0 +1,237 @@
+/**
+ * Please note, that each component has it's own
+ * @media rule(s) in its own section 
+ * framed in commented section
+ */
+
+/*--------  LOGOTYPE  --------*/
+
+.logotype-wrapper {
+  display: inline-block;
+  height: 24px;
+}
+
+.logotype {
+  font-family: var(--logo-text-family);
+  font-size: var(--logo-text-size);
+  font-weight: var(--logo-text-weight);
+  line-height: 1.17;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--brand-color);
+}
+
+.logotype-right-accent {
+  color: var(--title-color);
+}
+
+/*---------  BUTTONS  --------*/
+
+/* button created from image */
+
+.image-btn {
+  padding: 0;
+  border: none;
+  line-height: 0;
+  background-color: transparent;
+}
+
+/* basic button with brand color */
+
+.basic-branded-btn-component {
+  border: none;
+  font-family: inherit;
+  font-size: var(--btn-text-size);
+  font-weight: var(--btn-text-weight);
+  line-height: inherit;
+  letter-spacing: 0.04em;
+  background-color: var(--brand-color);
+  color: var(--secondary-color-white);
+  transition: background-color var(--transition-duration)
+    var(--transition-function);
+}
+
+.basic-branded-btn-component:active {
+  background-color: var(--active-element-color);
+}
+
+@media screen and (min-width: 1440px) {
+  .basic-branded-btn-component:hover,
+  .basic-branded-btn-component:focus {
+    background-color: var(--active-element-color);
+  }
+}
+
+/* close button */
+
+.close-btn-component {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 24px;
+  height: 24px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  background-color: var(--primary-accent-color);
+  transition: background-color var(--transition-duration)
+    var(--transition-function);
+}
+
+.close-btn-component:active {
+  border: none;
+  background-color: var(--active-element-color);
+}
+
+.close-btn-component-icon {
+  stroke-width: 1px;
+  stroke: var(--modal-window-element-color-dark);
+  transition: fill var(--transition-duration) var(--transition-function);
+}
+
+.close-btn-component:active .close-btn-component-icon {
+  fill: var(--secondary-color-white);
+}
+
+@media screen and (min-width: 1440px) {
+  .close-btn-component:hover,
+  .close-btn-component:focus {
+    background-color: var(--active-element-color);
+  }
+
+  .close-btn-component:hover .close-btn-component-icon,
+  .close-btn-component:focus .close-btn-component-icon {
+    fill: var(--secondary-color-white);
+  }
+}
+
+/*---------  MENU  -----------*/
+
+.menu-list {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.menu-item-link {
+  font-size: var(--title-text-size);
+  font-weight: var(--title-text-weight);
+  line-height: 1.11;
+  letter-spacing: 0.02em;
+  text-transform: capitalize;
+  color: var(--menu-item-color);
+  transition: color var(--transition-duration) var(--transition-function);
+}
+
+/* flag for the current page */
+.menu-item-link.current-page {
+  color: var(--brand-color);
+}
+
+.menu-item-link:active {
+  color: var(--active-element-color);
+}
+
+@media screen and (min-width: 1440px) {
+  .menu:hover .menu-item-link,
+  .menu:focus .menu-item-link {
+    color: var(--menu-item-color);
+  }
+
+  .menu:hover .menu-item-link:hover,
+  .menu:focus .menu-item-link:focus {
+    color: var(--brand-color);
+  }
+}
+
+/*--  SOCIAL MEDIA CONTACTS  -*/
+
+.social-media-contacts-list {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 232px;
+}
+
+.social-media-contact-item {
+  display: block;
+  width: 40px;
+  height: 40px;
+}
+
+.social-media-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+  height: 100%;
+
+  border-radius: 50%;
+  background-color: var(--brand-color);
+
+  transition: background-color var(--transition-duration)
+    var(--transition-function);
+}
+
+.social-media-link:active {
+  background-color: var(--active-element-color);
+}
+
+.social-contact-icon {
+  fill: var(--secondary-accent-color);
+  transition: transform var(--flip-icon-transition-duration);
+}
+
+@media screen and (min-width: 1440px) {
+  .social-media-contact-item:hover .social-media-link,
+  .social-media-contact-item:hover .social-media-link {
+    background-color: var(--active-element-color);
+  }
+
+  .social-media-contact-item:hover .social-media-link > .social-contact-icon,
+  .social-media-contact-item:focus .social-media-link > .social-contact-icon {
+    transform: rotateY(360deg);
+  }
+}
+
+/*------  TEXT INPUT  --------*/
+
+.input-text-field-component {
+  width: 100%;
+
+  border-radius: 4px;
+  border: 1px solid var(--modal-element-transparent-color-grey);
+  background-color: transparent;
+
+  font-size: var(--form-element-text-size);
+  color: var(--modal-window-element-color-dark);
+}
+
+.input-text-field-component::placeholder {
+  opacity: 0.5;
+
+  font-size: var(--small-text-size);
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  color: var(--accent-color-grey);
+}
+
+.input-text-field-component:focus,
+.input-text-field-component:focus {
+  outline: transparent;
+}
+
+@media screen and (min-width: 1440px) {
+  .input-text-field-component {
+    transition: border-color var(--transition-duration)
+      var(--transition-function);
+  }
+
+  .input-text-field-component:focus,
+  .input-text-field-component:focus {
+    border-color: var(--brand-color);
+  }
+}
