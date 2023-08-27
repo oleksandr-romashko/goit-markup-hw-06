@@ -214,6 +214,7 @@
   opacity: 0.5;
 
   font-size: var(--small-text-size);
+  font-style: normal;
   line-height: 1.17;
   letter-spacing: 0.04em;
   color: var(--accent-color-grey);
