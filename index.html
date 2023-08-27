@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="">
   <title>WEBSTUDIO - Main Page</title>
+  <link rel="icon" type="image/svg" href="./images/favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@800&family=Roboto:wght@400;500;700&display=swap"
@@ -14,7 +15,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css"
     integrity="sha512-4xo8blKMVCiXpTaLzQSLSw3KFOVPWhm/TRtuPVc4WG6kUgjH6J03IBuG7JZPkcWMxJ5huwaBpOpnwYElP/m6wg=="
     crossorigin="anonymous" referrerpolicy="no-referrer">
-  <link rel="stylesheet" href="./css/styles.css">
+  <link rel="stylesheet" href="./css/index.css">
 </head>
 
 <body>
@@ -22,12 +23,16 @@
   <header class="page-header">
     <div class="page-header-container container">
       <nav class="page-navigation">
+        <!-- logotype -->
         <a class="logotype link" href="./index.html">
-          Web<span class="logotype-right-accent">Studio</span>
+          <div class="logotype-wrapper">
+            Web<span class="logotype-right-accent">Studio</span>
+          </div>
         </a>
+        <!-- main menu -->
         <ul class="menu list">
           <li class="menu-item">
-            <a id="it" class="current menu-item-link link" href="./index.html">Studio</a>
+            <a id="it" class="menu-item-link current-page link" href="./index.html">Studio</a>
           </li>
           <li class="menu-item">
             <a class="menu-item-link link" href="./portfolio.html">Portfolio</a>
@@ -37,13 +42,21 @@
           </li>
         </ul>
       </nav>
+      <!-- mobile menu open button -->
+      <button class="mobile-menu-open-btn image-btn js-open-menu" aria-expanded="false" aria-controls="mobile-menu"
+        type="button">
+        <svg class="mobile-menu-open-btn-icon" width="32" height="22">
+          <use href="./images/icons.svg#icon-hamburger"></use>
+        </svg>
+      </button>
+      <!-- contacts -->
       <address class="contacts">
         <ul class="contacts-list list">
-          <li class="contact-item">
-            <a class="contact link" href="mailto:info@devstudio.com">info@devstudio.com</a>
+          <li class="contacts-list-item">
+            <a class="contact-email contact link" href="mailto:info@devstudio.com">info@devstudio.com</a>
           </li>
-          <li class="contact-item">
-            <a class="contact link" href="tel:+110001111111">+11&nbsp;(000)&nbsp;111-11-11</a>
+          <li class="contacts-list-item">
+            <a class="contact-phone contact link" href="tel:+110001111111">+11&nbsp;(000)&nbsp;111-11-11</a>
           </li>
         </ul>
       </address>
@@ -53,17 +66,17 @@
   <!-- MAIN -->
   <main>
     <!-- HERO -->
-    <section class="hero">
+    <!-- <section class="hero">
       <div class="container">
         <h1 class="page-title">Effective Solutions for&nbsp;Your Business</h1>
-        <button class="order-btn basic-btn" type="button" data-modal-open>Order Service</button>
+        <button class="order-btn basic-branded-btn-component" type="button" data-modal-open>Order Service</button>
       </div>
-    </section>
+    </section> -->
 
     <!-- BENEFITS -->
-    <section class="benefits section">
+    <!-- <section class="benefits section">
       <div class="container">
-        <h2 class="section-title visually-hidden">Benefits</h2>
+        <h2 class="section-title-text section-title-offset visually-hidden">Benefits</h2>
         <ul class="benefits-list list">
           <li class="benefits-list-item">
             <div class="benefits-icon-wrapper">
@@ -107,12 +120,12 @@
           </li>
         </ul>
       </div>
-    </section>
+    </section> -->
 
     <!-- ABOUT -->
-    <section class="about section">
+    <!-- <section class="about section">
       <div class="container">
-        <h2 class="section-title">What are we doing</h2>
+        <h2 class="section-title-text section-title-offset">What are we doing</h2>
         <ul class="about-list list">
           <li class="about-list-item">
             <img class="about-img" src="./images/about/desktop.jpg" width="360" height="300" alt="Desktop applications">
@@ -126,12 +139,12 @@
           </li>
         </ul>
       </div>
-    </section>
+    </section> -->
 
     <!-- TEAM -->
-    <section class="team section">
+    <!-- <section class="team section">
       <div class="container">
-        <h2 class="section-title">Our Team</h2>
+        <h2 class="section-title-text section-title-offset">Our Team</h2>
         <ul class="team-list list">
           <li class="team-member-card">
             <img src="./images/team/mark.jpg" width="264" height="260"
@@ -287,12 +300,12 @@
           </li>
         </ul>
       </div>
-    </section>
+    </section> -->
 
     <!-- CLIENTS -->
-    <section class="clients section">
+    <!-- <section class="clients section">
       <div class="container">
-        <h2 class="section-title">Customers</h2>
+        <h2 class="section-title-text section-title-offset">Customers</h2>
         <ul class="clients-list list">
           <li class="clients-list-item">
             <a class="client-link link" href="" target="_blank" rel="noopener noreferrer">
@@ -338,45 +351,48 @@
           </li>
         </ul>
       </div>
-    </section>
+    </section> -->
   </main>
 
   <!-- FOOTER -->
   <footer class="page-footer">
-    <div class="container">
+    <div class="page-footer-container container">
       <div class="footer-logo-and-moto">
         <a class="logotype link" href="./index.html">
-          Web<span class="logotype-right-accent">Studio</span>
+          <div class="logotype-wrapper">
+            Web<span class="logotype-right-accent">Studio</span>
+          </div>
         </a>
         <p class="footer-moto-text">Increase the flow of customers and sales for your business with digital marketing &
           growth solutions.</p>
       </div>
       <div class="footer-social-media">
         <p class="footer-social-media-title">Social media</p>
+        <!-- social media -->
         <ul class="social-media-contacts-list list">
           <li class="social-media-contact-item">
-            <a class="social-media-link" href="" target="_blank" rel="noopener noreferrer">
+            <a class="social-media-link image-btn" href="" target="_blank" rel="noopener noreferrer">
               <svg class="social-contact-icon" width="24" height="24" aria-label="Instagram icon">
                 <use href="./images/icons.svg#icon-instagram"></use>
               </svg>
             </a>
           </li>
           <li class="social-media-contact-item">
-            <a class="social-media-link" href="" target="_blank" rel="noopener noreferrer">
+            <a class="social-media-link image-btn" href="" target="_blank" rel="noopener noreferrer">
               <svg class="social-contact-icon" width="24" height="24" aria-label="Twitter icon">
                 <use href="./images/icons.svg#icon-twitter"></use>
               </svg>
             </a>
           </li>
           <li class="social-media-contact-item">
-            <a class="social-media-link" href="" target="_blank" rel="noopener noreferrer">
+            <a class="social-media-link image-btn" href="" target="_blank" rel="noopener noreferrer">
               <svg class="social-contact-icon" width="24" height="24" aria-label="Facebook icon">
                 <use href="./images/icons.svg#icon-facebook"></use>
               </svg>
             </a>
           </li>
           <li class="social-media-contact-item">
-            <a class="social-media-link" href="" target="_blank" rel="noopener noreferrer">
+            <a class="social-media-link image-btn" href="" target="_blank" rel="noopener noreferrer">
               <svg class="social-contact-icon" width="24" height="24" aria-label="LinkedIn icon">
                 <use href="./images/icons.svg#icon-linkedin"></use>
               </svg>
@@ -388,10 +404,10 @@
         <p class="footer-subscribe-form-title">Subscribe</p>
         <form class="footer-subscribe-form">
           <label class="footer-subscribe-form-field">
-            <input class="footer-subscribe-form-input" type="email" name="user-subscribe-email" placeholder="E-mail"
-              required>
+            <input class="footer-subscribe-form-input input-text-field-component" type="email"
+              name="user-subscribe-email" placeholder="E-mail" required>
           </label>
-          <button class="footer-subscribe-btn basic-btn" type="submit">
+          <button class="footer-subscribe-btn basic-branded-btn-component" type="submit">
             Subscribe
             <svg class="footer-subscribe-btn-icon" width="24" height="24">
               <use href="./images/icons.svg#icon-subscribe"></use>
@@ -402,11 +418,81 @@
     </div>
   </footer>
 
+  <!-- MOBILE MENU MODAL WINDOW -->
+  <div class="mobile-menu js-menu-container" id="mobile-menu">
+    <nav class="menu-navigation">
+      <ul class="menu-list list">
+        <li class="menu-list-item">
+          <a class="menu-item-link current-page link" href="./index.html">Studio</a>
+        </li>
+        <li class="menu-list-item">
+          <a class="menu-item-link link" href="./portfolio.html">Portfolio</a>
+        </li>
+        <li class="menu-list-item">
+          <a class="menu-item-link link" href="">Contacts</a>
+        </li>
+      </ul>
+    </nav>
+    <!-- contacts and social media -->
+    <div class="menu-contacts-social-wrapper">
+      <!-- contacts -->
+      <address class="menu-contacts">
+        <ul class="menu-contacts-list list">
+          <li class="contacts-item">
+            <a class="contact-phone section-title-text contact link" href="tel:+110001111111">
+              +11&nbsp;(000) 111-11-11
+            </a>
+          </li>
+          <li class="contacts-item">
+            <a class="section-subtitle contact link" href="mailto:info@devstudio.com">info@devstudio.com</a>
+          </li>
+        </ul>
+      </address>
+      <!-- social media -->
+      <ul class="social-media-contacts-list list">
+        <li class="social-media-contact-item">
+          <a class="social-media-link image-btn" href="" target="_blank" rel="noopener noreferrer">
+            <svg class="social-contact-icon" width="16" height="16" aria-label="Instagram icon">
+              <use href="./images/icons.svg#icon-instagram"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="social-media-contact-item">
+          <a class="social-media-link image-btn" href="" target="_blank" rel="noopener noreferrer">
+            <svg class="social-contact-icon" width="16" height="16" aria-label="Twitter icon">
+              <use href="./images/icons.svg#icon-twitter"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="social-media-contact-item">
+          <a class="social-media-link image-btn" href="" target="_blank" rel="noopener noreferrer">
+            <svg class="social-contact-icon" width="16" height="16" aria-label="Facebook icon">
+              <use href="./images/icons.svg#icon-facebook"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="social-media-contact-item">
+          <a class="social-media-link image-btn" href="" target="_blank" rel="noopener noreferrer">
+            <svg class="social-contact-icon" width="16" height="16" aria-label="LinkedIn icon">
+              <use href="./images/icons.svg#icon-linkedin"></use>
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <!-- modal close button -->
+    <button class="close-btn-component js-close-menu image-btn" type="button">
+      <svg class="close-btn-component-icon" width="8" height="8">
+        <use href="./images/icons.svg#icon-close-cross"></use>
+      </svg>
+    </button>
+  </div>
+
   <!-- BACKDROP WITH MODAL WINDOW -->
   <div class="backdrop is-hidden" data-modal>
     <div class="modal">
-      <button class="modal-close-btn" type="button" data-modal-close>
-        <svg class="modal-close-btn-icon" width="8" height="8" aria-label="Modal window close button icon">
+      <button class="close-btn-component" type="button" data-modal-close>
+        <svg class="close-btn-component-icon" width="8" height="8" aria-label="Modal window close button icon">
           <use href="./images/icons.svg#icon-close-cross"></use>
         </svg>
       </button>
@@ -450,7 +536,7 @@
 
         <div class="order-form-user-comment-field-wrapper">
           <label class="order-form-field-description" for="user-comment">Comment</label>
-          <!-- TODO: replace styles with same as for other fields -->
+          <!-- TODO: replace styles with same as for other fields - despite design layout -->
           <textarea class="order-form-text-field-comment" id="user-comment" name="user-comment"
             placeholder="Text input"></textarea>
         </div>
@@ -469,13 +555,18 @@
             <a href="" class="order-form-privacy-policy-link" target="_blank">Privacy Policy</a>
           </label>
         </div>
-        <button class="order-form-btn basic-btn" type="submit">Send</button>
+        <button class="order-form-btn basic-branded-btn-component" type="submit">Send</button>
       </form>
     </div>
   </div>
 
+  <!-- MODAL MENU SCRIPT -->
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+    integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+    crossorigin="anonymous"></script>
+  <script defer src="js/mobile-menu.js"></script>
   <!-- MODAL WINDOW SCRIPT -->
-  <script src="./js/modal.js"></script>
+  <!-- <script src="./js/modal.js"></script> -->
 </body>
 
 </html>
