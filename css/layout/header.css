@@ -22,9 +22,9 @@
 
 /*--------  LOGOTYPE  --------*/
 
-.logotype.link {
-  display: flex;
-  align-items: center;
+.page-header .logotype.link {
+  display: block;
+  padding: 24px 0;
   height: 100%;
 }
 
@@ -49,10 +49,10 @@
 }
 
 /*=============================================
-=     ADOPTATION FOR SCREENS UP TO 320px      =
+=   ADOPTATION FOR SCREENS DOWN TO 320px      =
 =============================================*/
 
-@media screen and (max-width: 427px) {
+@media screen and (max-width: 427.99px) {
   .mobile-menu .contact-phone {
     font-size: 24px;
   }
