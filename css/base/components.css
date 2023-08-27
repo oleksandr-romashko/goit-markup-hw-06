@@ -55,7 +55,7 @@
   background-color: var(--active-element-color);
 }
 
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 1158px) {
   .basic-branded-btn-component:hover,
   .basic-branded-btn-component:focus {
     background-color: var(--active-element-color);
@@ -95,7 +95,7 @@
   fill: var(--secondary-color-white);
 }
 
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 1158px) {
   .close-btn-component:hover,
   .close-btn-component:focus {
     background-color: var(--active-element-color);
@@ -134,7 +134,7 @@
   color: var(--active-element-color);
 }
 
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 1158px) {
   .menu:hover .menu-item-link,
   .menu:focus .menu-item-link {
     color: var(--menu-item-color);
@@ -185,7 +185,7 @@
   transition: transform var(--flip-icon-transition-duration);
 }
 
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 1158px) {
   .social-media-contact-item:hover .social-media-link,
   .social-media-contact-item:hover .social-media-link {
     background-color: var(--active-element-color);
@@ -225,7 +225,7 @@
   outline: transparent;
 }
 
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 1158px) {
   .input-text-field-component {
     transition: border-color var(--transition-duration)
       var(--transition-function);

@@ -151,7 +151,7 @@
 =            DESKTOP STYLES                   =
 =============================================*/
 
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 1158px) {
   /*-----  PAGE NAVIGATION  ----*/
   .page-navigation {
     column-gap: 76px;

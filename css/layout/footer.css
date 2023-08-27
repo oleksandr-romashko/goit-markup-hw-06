@@ -181,7 +181,7 @@
 =            DESKTOP STYLES                   =
 =============================================*/
 
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 1158px) {
   .page-footer {
     padding-top: 100px;
     padding-bottom: 100px;
