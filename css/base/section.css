@@ -3,10 +3,12 @@
   padding-bottom: 120px;
 }
 
-.section-title {
+.section-title-offset {
   margin-bottom: 72px;
   text-align: center;
+}
 
+.section-title-text {
   font-size: var(--title-text-size);
   font-weight: var(--title-text-weight);
   line-height: 1.11;
