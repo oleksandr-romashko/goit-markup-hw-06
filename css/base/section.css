@@ -3,16 +3,17 @@
   padding-bottom: 96px;
 }
 
-.section-title-offset {
+.section-title {
   margin-bottom: 72px;
   text-align: center;
 }
 
 .section-title-text {
+  text-align: center;
   font-size: var(--title-text-size);
   font-weight: var(--title-text-weight);
   line-height: 1.11;
-  letter-spacing: 0.72px;
+  letter-spacing: 0.02em;
   color: var(--title-color);
   text-transform: capitalize;
 }
@@ -23,4 +24,15 @@
   line-height: 1.2;
   letter-spacing: 0.4px;
   color: var(--title-color);
+}
+
+/*=============================================
+=            DESKTOP STYLES                   =
+=============================================*/
+
+@media screen and (min-width: 1158px) {
+  .section {
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
 }
