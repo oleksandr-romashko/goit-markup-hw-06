@@ -41,6 +41,10 @@ body {
   text-decoration: none;
 }
 
+.contact {
+  font-style: normal;
+}
+
 /*-  VISUALLY HIDDEN PATERN  -*/
 
 .visually-hidden {
@@ -54,42 +58,4 @@ body {
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
-}
-
-/*--------  COMPONENTS  ------*/
-
-/* button */
-
-.image-btn {
-  padding: 0;
-  border: none;
-  background-color: transparent;
-  line-height: 0;
-}
-
-.basic-btn {
-  border: none;
-  font-family: inherit;
-  font-size: var(--btn-text-size);
-  font-weight: var(--btn-text-weight);
-  line-height: inherit;
-  letter-spacing: 0.04em;
-  background-color: var(--brand-color);
-  color: var(--secondary-color-white);
-}
-
-/* logotype */
-
-.logotype {
-  font-family: var(--logo-text-family);
-  font-size: var(--logo-text-size);
-  font-weight: var(--logo-text-weight);
-  line-height: 1.17;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
-  color: var(--brand-color);
-}
-
-.logotype-right-accent {
-  color: var(--title-color);
 }
