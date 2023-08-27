@@ -1,5 +1,7 @@
 /*---------  BACKDROP  ---------*/
 
+/* backdrop */
+
 .backdrop {
   position: fixed;
   top: 0;
@@ -20,7 +22,9 @@
 
 /*-------  MODAL WINDOW  -------*/
 
-.modal {
+/* modal window */
+
+/* .modal {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -33,11 +37,11 @@
   box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2),
     0px 1px 3px 0px rgba(0, 0, 0, 0.12), 0px 1px 1px 0px rgba(0, 0, 0, 0.14);
   transition: transform var(--transition-duration) var(--transition-function);
-}
+} */
 
 /* modal - close button */
 
-.modal-close-btn {
+/* .close-btn {
   position: absolute;
   top: 24px;
   right: 24px;
@@ -56,18 +60,18 @@
     border var(--transition-duration) var(--transition-function);
 }
 
-.modal-close-btn:hover,
-.modal-close-btn:focus {
+.close-btn:hover,
+.close-btn:focus {
   border: none;
   background-color: var(--active-element-color);
 }
 
-.modal-close-btn:focus {
+.close-btn:focus {
   outline: 1px solid var(--brand-color);
   outline-offset: 2px;
 }
 
-.modal-close-btn-icon {
+.close-btn-icon {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -76,10 +80,10 @@
   transition: fill var(--transition-duration) var(--transition-function);
 }
 
-.modal-close-btn:hover .modal-close-btn-icon,
-.modal-close-btn:focus .modal-close-btn-icon {
+.close-btn:hover .close-btn-icon,
+.close-btn:focus .close-btn-icon {
   fill: var(--secondary-color-white);
-}
+} */
 
 /* modal - order form - title */
 
@@ -177,7 +181,6 @@
   resize: none;
 }
 
-.order-form-text-field-comment:focus,
 .order-form-text-field-comment:focus {
   border-color: var(--brand-color);
 }
@@ -272,7 +275,6 @@
 
 .order-form-privacy-policy-link:focus {
   border-radius: 2px;
-  outline: 1px solid var(--brand-color);
   outline-offset: 2px;
 }
 
@@ -286,11 +288,4 @@
   margin-right: auto;
   border-radius: 4px;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
-  transition: background-color var(--transition-duration)
-    var(--transition-function);
-}
-
-.order-form-btn:hover,
-.order-form-btn:focus {
-  background-color: var(--active-element-color);
 }
