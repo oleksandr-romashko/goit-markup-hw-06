@@ -8,9 +8,14 @@
 @import url("./base/container.css");
 @import url("./base/section.css");
 
+/*-------  COMPONTENTS  ------*/
+
+@import url("./base/components.css");
+
 /*-------  MODAL WINDOW  -----*/
 
-@import url("./layout/modal.css");
+@import url("./layout/modal/modal-mobile-menu.css");
+@import url("./layout/modal/modal-order-service.css");
 
 /*-----  SECTION LAYOUTS  ----*/
 
