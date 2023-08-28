@@ -24,66 +24,21 @@
 
 /* modal window */
 
-/* .modal {
+.modal {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   margin: 0 auto;
-  padding: 72px 24px 24px;
-  width: 408px;
+  padding: 72px 16px 24px;
+  width: calc(100% - 2 * 18px);
+  max-width: 392px;
   border-radius: 4px;
   background-color: var(--modal-window-bg);
   box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2),
     0px 1px 3px 0px rgba(0, 0, 0, 0.12), 0px 1px 1px 0px rgba(0, 0, 0, 0.14);
   transition: transform var(--transition-duration) var(--transition-function);
-} */
-
-/* modal - close button */
-
-/* .close-btn {
-  position: absolute;
-  top: 24px;
-  right: 24px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 24px;
-  height: 24px;
-  padding: 0;
-  line-height: 0;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  border-radius: 50%;
-  background-color: var(--primary-accent-color);
-  transition: background-color var(--transition-duration)
-      var(--transition-function),
-    border var(--transition-duration) var(--transition-function);
 }
-
-.close-btn:hover,
-.close-btn:focus {
-  border: none;
-  background-color: var(--active-element-color);
-}
-
-.close-btn:focus {
-  outline: 1px solid var(--brand-color);
-  outline-offset: 2px;
-}
-
-.close-btn-icon {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  fill: var(--modal-window-element-color-dark);
-  transition: fill var(--transition-duration) var(--transition-function);
-}
-
-.close-btn:hover .close-btn-icon,
-.close-btn:focus .close-btn-icon {
-  fill: var(--secondary-color-white);
-} */
 
 /* modal - order form - title */
 
@@ -91,42 +46,34 @@
   max-width: 100%;
   margin-bottom: 16px;
   text-align: center;
-  font-weight: 500;
+  font-weight: var(--subtitle-text-weight);
   color: var(--title-color);
 }
 
-/* modal - order form - common styles */
+/*--------  ORDER FORM  --------*/
 
-.order-form-interactive-text-element {
+.order-form {
   width: 100%;
-  border-radius: 4px;
-  border: 1px solid var(--modal-element-transparent-color-grey);
-  font-size: var(--form-element-text-size);
-  background-color: transparent;
-  outline: transparent;
-  transition: border-color var(--transition-duration) var(--transition-function);
 }
 
-.order-form-interactive-text-element:focus,
-.order-form-interactive-text-element:focus {
-  border-color: var(--brand-color);
+.order-form-user-text-field-wrapper {
+  display: block;
+  margin-bottom: 8px;
+  line-height: 0;
 }
+
+/* label as description */
 
 .order-form-field-description {
-  display: block;
-  width: 100%;
+  display: inline-block;
   margin-bottom: 4px;
   font-size: var(--small-text-size);
-  line-height: 1.17;
-  letter-spacing: 0.48px;
+  line-height: 1.167;
+  letter-spacing: 0.04em;
   color: var(--accent-color-grey);
 }
 
-/* modal - order form - text input */
-
-.order-form-user-text-field-wrapper {
-  margin-bottom: 8px;
-}
+/* input text field */
 
 .order-form-input-wrapper {
   display: block;
@@ -136,6 +83,7 @@
 .order-form-text-field-input {
   height: 40px;
   padding-left: 38px;
+  color: var(--modal-window-element-color-dark);
 }
 
 .order-form-text-field-icon {
@@ -147,14 +95,12 @@
   transition: fill var(--transition-duration) var(--transition-function);
 }
 
-.order-form-text-field-input:focus + .order-form-text-field-icon {
-  fill: var(--brand-color);
-}
-
-/* modal - order form - text comment */
+/* text comment */
 
 .order-form-user-comment-field-wrapper {
+  display: block;
   margin-bottom: 16px;
+  line-height: 0;
 }
 
 /* TODO: now element is using ::placeholder styles as main text
@@ -165,30 +111,16 @@
 .order-form-text-field-comment {
   height: 120px;
   padding: 8px 16px;
-  width: 100%;
-  border-radius: 4px;
-  border: 1px solid var(--modal-element-transparent-color-grey);
-  background-color: transparent;
-  font-size: var(--small-text-size);
-  line-height: 1.17;
-  letter-spacing: 0.48px;
-  color: var(--modal-element-transparent-color-grey);
-  outline: transparent;
-  transition: border-color var(--transition-duration) var(--transition-function);
 }
 
 .order-form-text-field-comment {
   resize: none;
 }
 
-.order-form-text-field-comment:focus {
-  border-color: var(--brand-color);
-}
-
 .order-form-text-field-comment::placeholder {
   font-size: var(--small-text-size);
   line-height: 1.17;
-  letter-spacing: 0.48px;
+  letter-spacing: 0.04em;
   color: var(--modal-element-transparent-color-grey);
 }
 
@@ -202,17 +134,17 @@
   display: block;
   font-size: var(--small-text-size);
   line-height: 1.17;
-  letter-spacing: 0.48px;
+  letter-spacing: 0.04em;
   color: var(--accent-color-grey);
 }
 
 /* checkmark */
 
 /* TODO: use this statement instead of "visually-hidden" class to hide element */
-/* .order-form-terms-consent-checkbox {
+.order-form-terms-consent-checkbox {
   position: absolute;
   appearance: none;
-} */
+}
 
 .order-form-terms-custom-checkmark {
   display: inline-flex;
@@ -243,7 +175,7 @@
 .order-form-terms-consent-checkbox:focus
   + .order-form-terms-description
   > .order-form-terms-custom-checkmark {
-  outline-color: var(--brand-color);
+  outline-color: var(--accent-color-grey);
   outline-offset: 2px;
 }
 
@@ -282,10 +214,26 @@
 
 .order-form-btn {
   display: block;
-  min-width: 169px;
+  width: 100%;
+  max-width: 169px;
+  height: 56px;
   padding: 16px 32px;
   margin-left: auto;
   margin-right: auto;
   border-radius: 4px;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+}
+
+/*=============================================
+=            TABLET STYLES                    =
+=============================================*/
+
+@media screen and (min-width: 768px) {
+  /* modal window */
+
+  .modal {
+    max-width: 408px;
+    padding-left: 25px;
+    padding-right: 25px;
+  }
 }
