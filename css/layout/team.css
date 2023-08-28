@@ -2,6 +2,12 @@
   background-color: var(--secondary-accent-color);
 }
 
+.team .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .team-list {
   display: flex;
   flex-direction: column;
@@ -45,12 +51,6 @@
 =============================================*/
 
 @media screen and (min-width: 768px) {
-  .team .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
   .team-list {
     flex-direction: row;
     flex-wrap: wrap;
