@@ -201,8 +201,8 @@
 
   /*-------  SOCIAL MEDIA  -------*/
 
-  .social-media-contact-item:hover .social-media-link,
-  .social-media-contact-item:hover .social-media-link {
+  .page-footer .social-media-contact-item:hover .social-media-link,
+  .page-footer .social-media-contact-item:hover .social-media-link {
     background-color: var(--accent-color-green);
   }
 
