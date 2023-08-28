@@ -1,47 +1,58 @@
-.portfolio {
-  padding-top: 96px;
-  padding-bottom: 120px;
-}
-
 /*----------  FILTER  ----------*/
+
+.portfolio {
+  padding-top: 48px;
+  padding-bottom: 48px;
+}
 
 .filters-list {
   display: flex;
-  justify-content: center;
-  gap: 24px;
-  margin-bottom: 72px;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 263px;
+  column-gap: 24px;
+  row-gap: 16px;
+  margin-bottom: 48px;
 }
 
 .filter-btn {
-  padding: 12px 24px;
+  display: flex;
+  padding: 8px 16px;
+  height: 40px;
   border-radius: 4px;
   border: 1px solid var(--primary-accent-color);
   background-color: var(--secondary-accent-color);
   color: var(--brand-color);
-    background-color var(--transition-duration) var(--transition-function),
+  letter-spacing: 0.25px;
+  transition: background-color var(--transition-duration)
+      var(--transition-function),
     color var(--transition-duration) var(--transition-function),
     box-shadow var(--transition-duration) var(--transition-function);
 }
 
-.filter-btn:hover,
 .filter-btn:focus {
-  border-color: transparent;
   color: var(--secondary-color-white);
-  box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.12),
-    0px 2px 1px 0px rgba(0, 0, 0, 0.08), 0px 3px 1px 0px rgba(0, 0, 0, 0.1);
+}
+
+.filter-btn.appliedFilter {
+  border-color: transparent;
+  background-color: var(--active-element-color);
+  color: var(--secondary-color-white);
 }
 
 /*--------  PROJECT CARDS  ------*/
 
 .projects-list {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
   column-gap: 24px;
   row-gap: 48px;
 }
 
 .project-card {
-  width: calc((100% - 2 * 24px) / 3);
+  width: 100%;
+  max-width: 396px;
 }
 
 .project-card-link {
@@ -49,24 +60,26 @@
   transition: box-shadow var(--transition-duration) var(--transition-function);
 }
 
-.project-card-link:hover,
-.project-card-link:focus {
-  box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08),
-    0px 1px 1px 0px rgba(46, 47, 66, 0.16),
-    0px 1px 6px 0px rgba(46, 47, 66, 0.08);
+.project-card-image {
+  width: 100%;
+  object-fit: scale-down;
+  height: min-content;
 }
 
 .project-card-content {
-  padding: 32px 16px;
+  padding-top: 32px;
+  padding-bottom: 32px;
   border: 1px solid var(--primary-accent-color);
   border-top: none;
 }
 
 .project-name {
+  display: block;
   margin-bottom: 8px;
 }
 
 .project-category {
+  display: block;
   color: var(--primary-color-black);
 }
 
@@ -90,7 +103,73 @@
   transition: transform var(--transition-duration) var(--transition-function);
 }
 
-.project-card-link:hover .overlay,
-.project-card-link:focus .overlay {
+.project-card-link:active .overlay {
   transform: translateY(0%);
+}
+
+/*=============================================
+=            TABLET STYLES                    =
+=============================================*/
+
+@media screen and (min-width: 768px) {
+  /*----------  FILTER  ----------*/
+  .filters-list {
+    justify-content: center;
+    max-width: unset;
+    column-gap: 24px;
+    margin-bottom: 64px;
+  }
+
+  /*--------  PROJECT CARDS  ------*/
+
+  .projects-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: 24px;
+    row-gap: 72px;
+  }
+
+  .project-card {
+    max-width: 356px;
+  }
+}
+
+/*=============================================
+=            DESKTOP STYLES                   =
+=============================================*/
+
+@media screen and (min-width: 1158px) {
+  /*----------  FILTER  ----------*/
+  .filters-list:hover .appliedFilter {
+    border: 1px solid var(--primary-accent-color);
+    background-color: var(--secondary-accent-color);
+    color: var(--brand-color);
+  }
+
+  .filters-list:hover .filter-btn:hover {
+    border-color: transparent;
+    background-color: var(--active-element-color);
+    color: var(--secondary-color-white);
+  }
+  /*--------  PROJECT CARDS  ------*/
+
+  .projects-list {
+    row-gap: 48px;
+  }
+
+  .project-card {
+    max-width: 360px;
+  }
+
+  .project-card-link:hover,
+  .project-card-link:focus {
+    box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08),
+      0px 1px 1px 0px rgba(46, 47, 66, 0.16),
+      0px 1px 6px 0px rgba(46, 47, 66, 0.08);
+  }
+
+  .project-card-link:hover .overlay,
+  .project-card-link:focus .overlay {
+    transform: translateY(0%);
+  }
 }
