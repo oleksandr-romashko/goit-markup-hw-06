@@ -45,6 +45,7 @@
   font-weight: var(--btn-text-weight);
   line-height: inherit;
   letter-spacing: 0.04em;
+  text-align: center;
   background-color: var(--brand-color);
   color: var(--secondary-color-white);
   transition: background-color var(--transition-duration)
@@ -220,7 +221,6 @@
   color: var(--accent-color-grey);
 }
 
-.input-text-field-component:focus,
 .input-text-field-component:focus {
   outline: transparent;
 }
