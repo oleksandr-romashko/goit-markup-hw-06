@@ -54,6 +54,7 @@
 
 .basic-branded-btn-component:active {
   background-color: var(--active-element-color);
+  color: var(--secondary-color-white);
 }
 
 @media screen and (min-width: 1158px) {
