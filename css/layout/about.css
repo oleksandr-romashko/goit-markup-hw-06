@@ -1,16 +1,27 @@
 .about {
-  padding-top: 0;
+  display: none;
 }
 
-.about-list {
-  display: flex;
-  gap: 24px;
-}
+/*=============================================
+=            DESKTOP STYLES                   =
+=============================================*/
 
-.about-list-item {
-  width: calc((100% - 48px) / 3);
-}
+@media screen and (min-width: 1158px) {
+  .about {
+    display: block;
+    padding-top: 0;
+  }
 
-.about .about-img {
-  border: 1px solid var(--primary-accent-color);
+  .about-list {
+    display: flex;
+    gap: 24px;
+  }
+
+  .about-list-item {
+    width: calc((100% - 48px) / 3);
+  }
+
+  .about .about-img {
+    border: 1px solid var(--primary-accent-color);
+  }
 }
