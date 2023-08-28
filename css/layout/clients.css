@@ -6,6 +6,7 @@
 
 .clients-list {
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
   column-gap: 16px;
   row-gap: 72px;
