@@ -59,6 +59,16 @@
 }
 
 /*=============================================
+=   ADOPTATION FOR SCREENS DOWN TO 280px      =
+=============================================*/
+
+@media screen and (max-width: 309.99px) {
+  .mobile-menu .contact-phone {
+    font-size: var(--subtitle-text-size);
+  }
+}
+
+/*=============================================
 =            TABLET STYLES                    =
 =============================================*/
 
